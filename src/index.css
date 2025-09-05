@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* космический минимализм */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Roboto, sans-serif;
+  background: radial-gradient(circle at 50% 20%, #0c0f27, #050510 60%, #010108);
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 50px;
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+}
+
+input,
+textarea,
+select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: white;
+  font-size: 14px;
+}
+
+.form-control {
+  height: 40px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.04);
+  color: white;
+  font-size: 13px;
+}
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.28);
+}
+
+button {
+  cursor: pointer;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.12s ease;
+}
+
+button.primary {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+  border-color: rgba(255,255,255,0.18);
+}
+
+select, select option {
+  background: rgba(12,15,39,0.95);
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+option {
+  background: #0c0f27;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.3);
+}

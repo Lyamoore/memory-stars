@@ -55,6 +55,8 @@ export default function FilterPanel({
                   type="button"
                   onClick={() => removeTagFilter(t)}
                   className="text-gray-300 hover:text-white"
+                  aria-label={`Удалить фильтр-тег ${t}`}
+                  title={`Удалить фильтр-тег ${t}`}
                 >
                   ×
                 </button>
@@ -70,6 +72,8 @@ export default function FilterPanel({
                   type="button"
                   onClick={() => addTagFilter(s)}
                   className="block w-full text-left px-2 py-1 hover:bg-gray-800/60 rounded"
+                  aria-label={`Добавить фильтр-тег ${s}`}
+                  title={`Добавить фильтр-тег ${s}`}
                 >
                   {s}
                 </button>
@@ -83,6 +87,9 @@ export default function FilterPanel({
           <select
             value={filterEmotion}
             onChange={(e) => setFilterEmotion(e.target.value)}
+            className="form-control"
+            aria-label="фильтр по эмоции"
+            title="Фильтр по эмоции"
           >
             <option value="all">Все</option>
             <option value="happy">Радость</option>

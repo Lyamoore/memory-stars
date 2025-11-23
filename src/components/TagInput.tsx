@@ -71,6 +71,8 @@ export default function TagInput({
               type="button"
               onClick={() => removeTag(t)}
               className="text-gray-300 hover:text-white"
+              aria-label={`Удалить тег ${t}`}
+              title={`Удалить тег ${t}`}
             >
               ×
             </button>
@@ -86,7 +88,9 @@ export default function TagInput({
             if (value) addTag(value)
           }}
           placeholder={placeholder || "Тег (Enter)"}
-          className="flex-1 min-w-0 px-2 py-1"
+          className="form-control flex-1 min-w-0"
+          aria-label="ввод тега"
+          title="Ввод тега"
         />
 
         {typeof name === "string" && (
@@ -102,6 +106,8 @@ export default function TagInput({
               type="button"
               onClick={() => addTag(s)}
               className="block w-full text-left px-2 py-1 hover:bg-gray-800/60 rounded"
+              aria-label={`Добавить тег ${s}`}
+              title={`Добавить тег ${s}`}
             >
               {s}
             </button>

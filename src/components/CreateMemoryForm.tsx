@@ -65,7 +65,12 @@ export default function CreateMemoryForm({
           suggestions={uniqueTags}
           name="tags"
         />
-        <button type="submit" className="primary">
+        <button
+          type="submit"
+          className="primary"
+          title="Добавить воспоминание"
+          aria-label="Добавить воспоминание"
+        >
           Добавить воспоминание
         </button>
       </form>

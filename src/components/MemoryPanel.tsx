@@ -54,13 +54,21 @@ export default function MemoryPanel({ memory, onClose, onDelete }: Props) {
         <button
           onClick={onClose}
           className="px-4 py-2 rounded-lg bg-gray-800/40 hover:bg-gray-800/50 transition"
+          title="Закрыть"
+          aria-label="Закрыть панель воспоминания"
         >
           Закрыть
         </button>
 
         <button
-          onClick={() => onDelete(memory.id)}
+          onClick={() => {
+            if (confirm("Вы уверены, что хотите удалить воспоминание?")) {
+              onDelete(memory.id)
+            }
+          }}
           className="px-4 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600 transition"
+          title="Удалить"
+          aria-label="Удалить воспоминание"
         >
           Удалить
         </button>
